@@ -88,14 +88,65 @@
 					<section id="two" class="wrapper style2 spotlights">
 						<div class="inner">
 							<h2>Our Methods</h2>
+
+							<h3>Data Collection</h3>
+							<p>For each county in Colorado, we need to find data on the following attributes:</p>
+							<ul>
+								<li>Contiguity</li>
+								<li>Population</li>
+								<li>Partisan Lean (PVI)</li>
+							</ul>
+
+							<h3>What is PVI?</h3>
+							<p>
+								PVI is a quantitative metric used for determining how biased a political region
+								(e.g., state, county, or congressional district) is either for the Democrats or the
+								Republicans. Alternatively, it represents how a political region votes relative to the
+								national popular vote.
+							</p>
+							
+							<span class="image fit"><img src="images/wisconsin_pvi.png" alt="" /></span>
+
+							<p>
+								Consider the following example for the 2020 US Presidential Election in Wisconsin. That
+								year, Biden won the popular vote by 4.5% (D+4.5). However, he only won the state of
+								Wisconsin by roughly 0.7% (D+0.7). Consequently, Wisconsin voted 3.8% more Republican
+								than the national popular vote (or the nation at-large), and so we can estimate its PVI
+								to be R+3.8.
+							</p>
+							
+							<span class="image fit"><img src="images/ohio_registration.png" alt="" /></span>
+
+							<p>
+								We chose to use PVI as a metric compared to voter registration numbers, as politically
+								unaffiliated voters can still vote (and massively influence!) in elections. In October
+								2021, nearly 78% of voters were unaffiliated, with slightly more registered Democrats
+								than registered Republicans. However, Donald Trump won the state by roughly 8% (R+8),
+								despite the Democrats' voter registration advantage. 
+
+							</p>
+
+							<h3>Scraping Data</h3>
+							
+							<p>
+								For our algorithm, we found credible sources backed up with US Census data, and scraped
+								the data with Python's BeautifulSoup library. All code and sources can be found on our
+								detailed report and the project repository.
+							</p>
+
+							<h3>Data Processing Results</h3>
+							
+							<p>
+								After additional processing with the Pandas library, we extracted two key CSVs from the
+								US Census data. Firstly, we extracted a table that stores all pairs of contiguous counties
+								in Colorado. Then, we extracted a table that stores the population and PVI for each
+								Colorado county.
+							</p>
+							
+							<span class="image fit"><img src="images/csv_schema.png" alt="" /></span>
+
 							<div class="features">
-								<section>
-									<h3>Data Collection on Colorado Counties</h3>
-									<p>Here we explain the data collection. Words words words Words words words
-										Words words words Words words words Words words words Words words words
-										Words words words Words words words Words words words
-									</p>
-								</section>
+
 								<section>
 									<h3>Markov Chain Monte Carlo</h3>
 									<p>Here we discuss the algoirthm we used.
