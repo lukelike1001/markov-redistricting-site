@@ -172,7 +172,7 @@
 							<section>
 								<h3>Score Functions</h3>
 								
-								<span class="image fit"><img src="images/populationscorefunction.jpg" alt="" /></span>
+								<span class="image fit"><img src="images/populationscorefunction.png" alt="" /></span>
 
 								<p>
 									Here is the score function that we used for our model. We are summing up the squared differences of our actual district populations with an ideal district population (where every district has exactly the same populations). Our model also considered PVI, and we created a seperate score function that worked to create more competitive districts by assinging lower scores to district plans where the PVI was closer to 0 across all districts. 
@@ -210,9 +210,13 @@
 							</section>
 
 							<section>
+								<h3>What is happening in the video?</h3>
+								<p>
+									The graph that we start with is the current districting of Colorado. Each iteration involves randomly picking an edge that lies between two distinct subgraphs, we call these <strong>conflicted edges</strong>. Once we have a conflicted edge, we then randomly select to move one of the two nodes it connects to and move that node to the subgraph (district) of the other node. We call this the proposed state, and we accept this proposed state if it has a lower (better) score from our score function. We also accept it sometimes if it has a worse score function, because there is the possibility that it could be closely related to a graph that has an even lower score function. For the case you are seeing on the left, our score function is trying to make the districts each contain a more equal proportion of the population, while also trying to make the districts be more competitive by minimizing our PVI Score function.
+								</p>
 								<h3>How to Run the Notebook</h3>
 								<p>
-									Insert writing here
+									The code on our repository starts by intializing the Colorado graph with all the required data, make sure to load the requisite files "mcmc_driver" and "generate_data" as some of the functions used in this file are housed there. The algorithm works for an arbitrary graph, as long as each node has both an attribute 'population' and an attribute 'PVI.' If you want to create a new metric that you want to optimize, just build a score function of similar structure as PVIScore and PopulationScore (remember to make smaller values correspond to more desirable district plans), add the corresponding attribute to your nodes, finally normalize the value of your new score function so that it return numbers of the same order as the other score functions and add this score function to the total score function.
 								</p>
 							</section>
 						</div>
