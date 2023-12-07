@@ -160,10 +160,12 @@
 							<section>
 								<h3>How It Works</h3>
 
-								<span class="image fit"><img src="images/stock_image1.png" alt="" /></span>
+								<span class="image fit"><img src="images/Example_Graph_MCMC.png" alt="" /></span>
 								
 								<p>
-									lorem ipsum dolores Markov Chain Monte Carlo
+									<li>Think of states as graphs where the nodes are counties, edges between nodes represent counties that share a border. A district is dividing this graph into subgraphs, see above picture.</li>
+                							<li>We define a score function that gives us a measure of how fair a particular district plan is.</li>
+                							<li>To do algorithmic redistricting, we slowly move nodes from one subgraph to another, checking if we want to change our current district plan to the new one by seeing if it has a better “score.”</li>
 								</p>
 							</section>
 
