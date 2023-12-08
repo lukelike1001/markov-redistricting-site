@@ -61,15 +61,23 @@
 								<h3>Necessity for Redistricting Algorithms</h3>
 								<p>There are many current cases where human bias affects the legitimacy of redistricting plans, especially concerning gerrymandering. In 
 									Alabama, there was a case in 2022 where the proposed district map infringed on the Voters Rights Act, as while Alabama has a 27% black population, 
-									only 1 of 7 proposed districts would be majority-Black.
+									only 1 of 7 proposed districts would be majority-Black. We also see cases such as in Wisconsin, where in 2022 Wisconsin voters elected
+									all Democratic party members in elections unaffected by gerrymandering (using statewide vote), but having a 64-35 Republican lead on a district level.
+									Below is a source that discusses the most gerrymandered states and gives a brief explanation as to the cause for each.
 								</p>
+
+								<h3><a href="https://worldpopulationreview.com/state-rankings/most-gerrymandered-states" class="button scrolly">Learn More</a></h3>
 							</section>
 							<section>
 								<h3>The Efficiency Gap</h3>
 								<p>The efficiency gap is a useful metric for "quantifying" fairness. If we consider wasted votes being votes for the winner in excess and
 									unused votes for the losing candidate, we can generate an equation to determine the efficiency of a district's votes. If we take (wasted votes for the loser) 
-									- (wasted votes for the winner) and divide by total votes, we can generate a value to determine the competitiveness of a district.
+									- (wasted votes for the winner) and divide by total votes, we can generate a value to determine the competitiveness of a district. Below is a source that 
+									briefly explains the efficiency gap and its purpose. Essentially when calculating efficiency gap, it is important to achieve low values,
+									as a proposed district plan with a high efficiency gap is considered gerrymandered.
 								</p>
+
+								<h3><a href="https://www.brennancenter.org/sites/default/files/legal-work/How_the_Efficiency_Gap_Standard_Works.pdf" class="button scrolly">Learn More</a></h3>
 							</section>
 						</div>
 					</div>
@@ -239,7 +247,7 @@
 				<!-- Societal Impacts -->
 				<section id="societal" class="wrapper style1 fade-up" style="background-color: #705279; color: white">
 					<div class="inner">
-						<h2>Societal Impacts</h2>
+						<h2>Societal Implications</h2>
 						<p>Here are each of our beliefs on the societal impact of our redistricting algorithm.
 						</p>
 						<div class="features">
@@ -317,7 +325,51 @@
 							</section>
 							<section>
 								<h3>Kiara</h3>
-								<p>Kiara's opinion</p>
+								<p>Initially, like 85% of Americans today, I was completely unaware about the effects of redistricting plans on voting outcomes [1].
+									 While I had a basic understanding of gerrymandering, I was not aware of exactly how prevalent it was in society today, and I was 
+									 unaware that there were so many options to solve such a perpetually contested issue. I think what really struck me while doing research 
+									 on alternate redistricting algorithms was the fact that there were so many options on what it meant to create a “fair” algorithm. <br><br>
+
+									 At first, in the early planning stages of our project, most of our group agreed that fairness should mean that the popular vote 
+									 correlates with the voting outcome as closely as possible. However, as we did research there were a lot more factors to quantifying 
+									 fairness than we had initially considered. Of course, one method discussed in our site is the efficiency gap, which is a measure of 
+									 the percentage of votes wasted in an election [2]. Essentially, this metric is used to determine whether the number of seats won by 
+									 a specific party was skewed [3]. <br><br>
+
+									 Another metric that we encountered was the extreme outlier test, which was actually very useful for many of the papers that discussed 
+									 implementing MCMC [4]. Because of the high number of simulations run by an algorithm using MCMC, it was important to create a metric to 
+									 analyze the population number in each district and number of seats that would be won by each party, essentially checking for any extreme 
+									 outliers and considering a redistricting that produces the mean value of all the plans to be the most optimal. While we ran multiple simulations, 
+									 we selected a lambda value that would produce a redistricting plan that generally aligned with the average voting result in all of our districting plans. <br><br>
+
+									 Finally, we also considered PVI, which mainly considers the partisanship of a proposed redistricting plan [6]. We sought to make districts more 
+									 competitive, which we believed would be fair considering that many people believe that district plans that favor a particular party over another 
+									 are gerrymandered. Also, one of the mains reasons we chose Colorado as our model was due to the fact that it is not considered to be gerrymandered, 
+									 so a comparison between the current map and our simulated map would be more accurate in testing our algorithm, especially when considering the PVI 
+									 values of our proposed redistricting to the current one. <br><br>
+
+									 While I believe we have made a strong start with quantifying the fairness of our algorithm, I do think it is important to note that there are a lot of 
+									 factors that are not considered in our data and algorithm itself. Considering the 2022 Alabama redistricting case, our algorithm does not include information 
+									 on racial demographics. Especially considering that a lot of issues with districting plans involve a negative racial aspect, I think in the future it 
+									 would be important to check that our algorithm is accurately representing all people, especially in states where minority voters can often get overlooked.
+								</p>
+								<ul>
+									<h3>Sources:</h3>
+									<li><a href="https://www.pewresearch.org/short-reads/2022/03/04/with-legislative-redistricting-at-a-cr
+										ucial-stage-most-americans-dont-feel-strongly-about-it/
+										">
+										[1] Pew Research Center</a></li>
+									<li><a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=5857&context=uclrev">
+										[2] Partisan Gerrymandering and the Efficiency Gap</a></li>
+									<li><a href="https://www.brennancenter.org/sites/default/files/legal-work/How_the_Efficiency_Gap_Standard_Works.pdf">
+										[3] Brennan Center: Efficiency Gap </a></li>
+									<li><a href="https://www.politico.com/2022-election/results/utah/house">
+										[4] Politico: Utah 2022</a></li>
+									<li><a href="https://www.technologyreview.com/2021/08/12/1031567/mathematicians-algorithms-stop-gerrymandering ">
+										[5] MIT Technology Review</a></li>
+									<li><a href="https://www.cookpolitical.com/cook-pvi">
+										[6] Cook PVI </a></li>
+								</ul>
 							</section>
 							<section>
 								<h3>Noah</h3>
