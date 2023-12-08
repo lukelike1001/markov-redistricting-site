@@ -220,7 +220,7 @@
 							<section>
 								<h3>What is happening in the video?</h3>
 								<p>
-									The graph that we start with is the current districting of Colorado. Each iteration involves randomly picking an edge that lies between two distinct subgraphs, we call these <strong>conflicted edges</strong>. Once we have a conflicted edge, we then randomly select to move one of the two nodes it connects to and move that node to the subgraph (district) of the other node. We call this the proposed state, and we accept this proposed state if it has a lower (better) score from our score function. We also accept it sometimes if it has a worse score function, because there is the possibility that it could be closely related to a graph that has an even lower score function. For the case you are seeing on the left, our score function is trying to make the districts each contain a more equal proportion of the population, while also trying to make the districts be more competitive by minimizing our PVI Score function.
+tch									The graph that we start with is the current districting of Colorado. Each iteration involves randomly picking an edge that lies between two distinct subgraphs, we call these <strong>conflicted edges</strong>. Once we have a conflicted edge, we then randomly select to move one of the two nodes it connects to and move that node to the subgraph (district) of the other node. We call this the proposed state, and we accept this proposed state if it has a lower (better) score from our score function. We also accept it sometimes if it has a worse score function, because there is the possibility that it could be closely related to a graph that has an even lower score function. For the case you are seeing on the left, our score function is trying to make the districts each contain a more equal proportion of the population, while also trying to make the districts be more competitive by minimizing our PVI Score function.
 								</p>
 								<h3>How to Run the Notebook</h3>
 								<p>
@@ -253,7 +253,46 @@
 						<div class="features">
 							<section>
 								<h3>Mitch</h3>
-								<p>Mitch's Opinion</p>
+								<p>
+                                                                        Democracy in America is under attack [1]. Rampant disinformation, right-wing populism, and political manipulation are all certainly (at least partially) to blame. Still, often, would-be authoritarian supporters raise legitimate grievances about the system under which they live. It is reasonable, one could argue, that if democracy has failed a family for generations, their reaching out to a new system is not an act of evil but of self-preservation.
+                                                                </p>
+
+								<p>
+Even if policies enacted fail in their stated goals--or the stated goals are not in line with the general political needs of a citizenry--one thing must be true for a system to be democratic: fair representation of the voting population. Without it, a state may have the facade of democracy but never a complete one. While concerns over majority/minority rule, political partisanship, number of parties, and other logistical and cultural features should be considered, without equal representation, one cannot call a system democratic.
+                                                                </p>
+
+								<p>
+Enter redistricting, the process by which elected (or unelected) officials decide which votes will be counted together such that those voters share the same representative in Congress. In theory, this is an essential (if not tedious) practice meant to keep elections competitive where they should be and keep like-minded citizens fairly represented at the highest levels of leadership. However, in practice, partisan actors have been shown to redraw their maps such that while they give the illusion of fairness, equitability, or other standards put forth in federal law, they are purely redraws to benefit one political party, typically the one doing the redistricting. This anti-democratic practice is known as gerrymandering and is on the rise in the US [2].
+                                                                </p>
+
+								<p>
+Fortunately, statistical and algorithmic methods can be used to assess the fairness of a proposed redistricting and propose a novel redistricting schema that may increase that fairness [3]. On this site, we offer one such method: a Markov Chain Monte Carlo (MCMC) approach in which a population is represented with a network graph, and variations on that graph are shifted at random, one small step at a time. At each iteration, we can use a score function to assess any number of parameters. In our case, we optimize for competitiveness, but we could just as trivially optimize for fairness, equitability, or any other realities that could be translated into a score function. When we minimize this score function, we arrive at an increasingly optimal map, depending on which features we use to define optimal and which weights we put on each.
+                                                                </p>
+
+								<p>
+However, MCMC is not the perfect platonic ideal solution to the redistricting problem. Because we can use our technique to optimize over any arbitrary score function, it can also be optimized for one-party gain. When discussing gerrymandering with the MIT Technology Review, Michael Li, a redistricting expert at the Brennan Center for Justice at the New York University's Law School, said that gerrymandering has gone from a "dark art" to a "dark science" [3] precisely because of the use of new scientific methods (including MCMC) to increase the ease by which lawmakers can gerrymander.
+                                                                </p>
+
+								<p>
+In this case, a combination of strong regulations and algorithmic transparency is crucial, but so is the use of an algorithmic method for redistricting. With excellent results from our comparatively simple example algorithm, dedicated teams of scientists could far exceed manual map-making regarding fairness, equitability, and representation. Not only would the adoption of these methods be an exciting pro-democratic shift in an increasingly anti-democratic political landscape, but it could help voters see their vote for what it ought to be: the single greatest weapon they have to fight for their political opinions.
+                                                                </p>
+
+								<p>
+The US has many democratically imperfect systems. The US Electoral College has given us two presidents in recent history who have lost the national popular vote [4], the US Senate has two representatives for each state, even though states have drastically different populations, often giving rise to minority rule (or at least minority powers of sabotage), and we have a long and storied history of banning or suppressing the votes of marginalized communities [5]. Anti-democratic Americans who point to these failures of democracy are correct in their critiques, but mathematics can help us do better. Provided that we ensure transparency, accountability, effectiveness, and equitability, statistical methods are not only helpful for redrawing maps but are among many tools to help us build our imperfect union into a more perfect one.
+                                                                </p>
+									<h3>Sources:</h3>
+									<li><a href="https://www.nytimes.com/2021/12/13/briefing/anti-democratic-movement-us-politics.html">
+										[1] NYT: America’s Anti-Democratic Movement</a></li>
+									<li><a href="https://www.cnn.com/2022/01/25/politics/gerrymandering-us-house-partisan/index.html">
+										[2] How gerrymandering makes the US House intensely partisan </a></li>
+									<li><a href="https://www.technologyreview.com/2021/08/12/1031567/mathematicians-algorithms-stop-gerrymandering">
+										[3] MIT Technology Review: Mathematicians are deploying algorithms to stop gerrymandering</a></li>
+									<li><a href="https://www.history.com/news/presidents-electoral-college-popular-vote">
+										[4] History: 5 Presidents Who Lost the Popular Vote But Won the Election</a></li>
+									<li><a href="https://education.nationalgeographic.org/resource/voting-rights-throughout-history/">
+										[5] National Geographic: Voting Rights Throughout United States History</a></li>
+								</ul>
+
 							</section>
 							<section>
 								<h3>Luke</h3>
